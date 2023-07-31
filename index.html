@@ -14,55 +14,134 @@
 
 <body>
     <header>
-        <img src="img/img2.jpg">
-        <section class="dev-name">
-            <h1>Facu Dev</h1>
-            <h4>Facundo Fernández</h4>
-            <div class="about-me">
-                <p class="about-me-p">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos facere odio nemo veritatis commodi?
-                    Officiis, qui ex. Harum vitae veritatis laboriosam. Odio pariatur assumenda dolor sit necessitatibus
-                    magni quo sapiente!
-                </p>
-            </div>
-        </section>
+        <nav class="navigation">
+            <ul>
+                <li><a class="link" href="#projects">Proyectos</a></li>
+                <li><a class="link" href="#others">Otros trabajos</a></li>
+                <li><a class="link" href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-about-me">
+            <img loading="lazy" alt="Foto de perfil" src="img/img2.jpg">
+            <section class="dev-name">
+                <h1><span>{</span> Facu Dev <span>}</span></h1>
+                <h4>Facundo Fernández</h4>
+                <div class="about-me">
+                    <p class="about-me-p">
+
+                    </p>
+                </div>
+            </section>
+        </div>
     </header>
 
-    <main>
+    <section>
+        <div class="wrapper">
+            <p>Estoy </p>
+            <div class="words">
+                <span>Trabajando</span>
+                <span>Jugando</span>
+                <span>Aprendiendo</span>
+                <span><strong>Fe No Me Nal</strong></span>
+                <span>Programando...</span>
+                <span>Trabajando</span>
+            </div>
+        </div>
+    </section>
 
-        <section class="projects">
+    <main>
+        <section class="projects" id="projects">
             <div class="projects-header">
-                <h3>Projectos</h3>
+                <h2>Proyectos</h2>
                 <p>
-                    Estos son proyectos en los que trabaje, llendo desde desarrollo de <strong>videojuegos</strong> hasta desarrollo
+                    Estos son proyectos en los que trabaje, yendo desde desarrollo de <strong>videojuegos</strong>
+                    hasta desarrollo
                     <strong>Back-end</strong> y <strong>Front-end</strong>
                 </p>
             </div>
-            <div class="projects-content">
-                
+            <div class="d-center">
+                <section class="projects-content">
+                    <section class="project">
+                        <div class="project-header">
+                            <a href="" class="link">
+                                <h4>Treasure Chain <img loading="lazy" decoding="async"
+                                        src="https://images.squarespace-cdn.com/content/v1/62a2c7fa9273c3315ac08914/4b597af7-339b-4cf1-b864-e5db7acb4b32/64x64_Chest_5.png">
+                                </h4>
+                            </a>
+                            <small class="text-muted">Godot Engine | Node.js | AWS & S3 | JS | HTML | CSS | Blockchain</small>
+                        </div>
+                        <div class="project-content">
+                            <p>Lider tecnico, desarrollo de plataforma web interactiva para artistas, integrando tecnologías blockchain y servicios de entrega de contenido con Cloud Front y AWS. usando el Front-end con Godot Engine. integrando cuentas y elementos NFT con grandes conjuntos de imagenes e interactividad única
+                            </p>
+                        </div>
+                    </section>
+                    
+
+                    <section class="projects-content">
+                        <section class="project">
+                            <div class="project-header">
+                                <a href="" class="link">
+                                    <h4>Doomsday paradise</h4>
+                                </a>
+                                <small class="text-muted">Godot Engine | Nakama | STUN y Coturn Server</small>
+                            </div>
+                            <div class="project-content">
+                                <p>Desarrolle e implemente un sistema multijugador basado en turnos para el proyecto
+                                    <strong>Doomsday paradise</strong> utilizando Nakama Server y un servidor STUN para
+                                    conexiónes <strong>Peer to Peer</strong>
+                                </p>
+                                <div class="iframe-container" data-src="https://store.steampowered.com/widget/1603420">
+
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="project obj-hover">
+                            <div class="project-header">
+                                <a href="https://store.steampowered.com/app/740310/Transmogrify/" class="link">
+                                    <h4>Transmogrify</h4>
+                                </a>
+                                <small class="text-muted">Godot Engine | QA</small>
+                            </div>
+                            <div class="project-content">
+                                <p>Desarrollo, QA, optimizaciones y unit-testing para la busqueda de errores
+                                </p>
+                                <div class="iframe-container" data-src="https://store.steampowered.com/widget/740310/">
+
+                                </div>
+                            </div>
+                        </section>
+                    </section>
             </div>
         </section>
+        </div>
+        </section>
 
-        <section class="contact">
+        <section class="contact" id="contact">
             <form id="contact-form" class="contact-form">
-                <h3>Contactame</h3>
+                <h3 class="form-contact">Contactame</h3>
                 <div class="form-group form-contact">
                     <label for="input-fullname" class="form-label">Nombre Completo: *</label>
                     <input class="form-control" type="text" id="input-fullname" placeholder="Nombre completo">
                 </div>
-                <div class="form-group">
+                <div class="form-group form-contact">
                     <label for="message">Mensaje: </label>
-                    <textarea id="input-message" class="form-control" placeholder="Mensaje" rows="5"></textarea>
+                    <textarea id="input-message" class="form-control" placeholder="Mensaje" rows="3"></textarea>
                 </div>
-
-                <div class="pt-3">
+                <div class="pt-1 m-3">
                     <button type="submit" class="obj-hover btn btn-secondary">Enviar</button>
                 </div>
             </form>
         </section>
     </main>
 
+    <footer>
+        <p>&copy; 2023 Todos los derechos reservados.</p>
+    </footer>
+
     <script src="/js/init.js"></script>
+    <script src="/js/main.js"></script>
     <script src="https://kit.fontawesome.com/c809235686.js" crossorigin="anonymous"></script>
 </body>
 
