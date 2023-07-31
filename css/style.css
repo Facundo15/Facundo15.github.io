@@ -47,12 +47,12 @@ footer {
 }
 
 .header-about-me > * {
-    margin: 50px;
+    margin: 10px;
 }
 
 header img {
-    width: 20%;
-    height: 20%;
+    max-width: 195px;
+    max-height: 196px;
     
     border-radius: 50%;
 }
@@ -104,6 +104,8 @@ header img {
         height: 20rem;
     }
 }
+
+
 
 .dev-name h4 {
     font-size: 1.2rem;
@@ -192,11 +194,20 @@ main {
     }
 }
 
-.projects {
+.project {
+    box-sizing: content-box;
+    border: 2px dotted black;
+    padding: 10px;
+    border-radius: 20px;
+    max-width: 520px;
 }
 
 .projects .projects-header {
     text-align: center;
+}
+
+iframe {
+    border-radius: 10px;
 }
 
 @media (min-width: 1280px) {
@@ -205,19 +216,58 @@ main {
     }
 }
 
-.projects-content {
-    display: grid;
-    gap: 5px;
-    max-width: 1050px;
-    justify-content: center;
+
+@media screen and (max-width: 412px) {
+    .project {
+        max-width: 360px;
+    }
 }
 
-.project {
-    box-sizing: content-box;
-    border: 2px dotted black;
-    padding: 10px;
-    border-radius: 20px;
-    max-width: 520px;
+@media screen and (max-width: 415px) {
+    .project {
+        max-width: 370px;
+    }
+
+    iframe {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .project {
+        max-width: 370px;
+    }
+}
+
+@media screen and (max-width: 394px) {
+    .project {
+        max-width: 340px;
+    }
+
+    .header-about-me {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .project {
+        max-width: 250px;
+    }
+}
+
+.iframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-content {
+    display: grid;
+    gap: 10px;
+    max-width: 1050px;
+    justify-content: center;
 }
 
 .d-center {
