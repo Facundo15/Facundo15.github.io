@@ -53,7 +53,7 @@ function loadIframes() {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('contact-form').addEventListener('submit', openContact);
+    //document.getElementById('contact-form').addEventListener('submit', openContact);
 
     loadIframes();
 });

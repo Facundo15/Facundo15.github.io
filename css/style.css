@@ -1,10 +1,5 @@
 
 
-body {
-    padding: 0%;
-    margin: 0%;
-}
-
 footer {
     display: flex;
     align-items: center;
@@ -46,14 +41,14 @@ footer {
     align-items: center;
 }
 
-.header-about-me > * {
+.header-about-me>* {
     margin: 10px;
 }
 
 header img {
     max-width: 195px;
     max-height: 196px;
-    
+
     border-radius: 50%;
 }
 
@@ -72,9 +67,14 @@ header img {
 
 .contact-form {
     width: 35rem;
-    height: 25rem;
+    min-height: 22rem;
     border: 2px outset black;
     border-radius: 20px;
+}
+
+.button-send-container {
+    margin-left: 1rem;
+    padding-bottom: 1.2rem;
 }
 
 .form-contact {
@@ -105,6 +105,50 @@ header img {
     }
 }
 
+@media (min-width: 769px) {
+    .obj-hover:hover {
+        transform: scale(1.1);
+    }
+
+    .dev-name h1 {
+        display: flex;
+    }
+
+    .dev-name h1 .sa, .sb {
+        transform: translateX(0px);
+    }
+
+    .dev-name h1:hover .sa {
+        animation: move_left 0.2s linear;
+        transform: translateX(-20px)
+    }
+
+    .dev-name h1:hover .sb {
+        animation: move_right 0.2s linear;
+        transform: translateX(20px)
+    }
+
+    @keyframes move_right {
+        from {
+            transform: translateX(0px)
+        }
+
+        to {
+            transform: translateX(20px)
+        }
+    }
+
+    @keyframes move_left {
+        from {
+            transform: translateX(0px)
+        }
+
+        to {
+            transform: translateX(-20px)
+        }
+    }
+
+}
 
 
 .dev-name h4 {
@@ -138,13 +182,6 @@ main {
     padding-bottom: 3%;
 }
 
-
-@media (min-width: 769px) {
-    .obj-hover:hover {
-        transform: scale(1.1);
-    }
-}
-
 .wrapper {
     box-sizing: content-box;
     height: 70px;
@@ -159,6 +196,10 @@ main {
     overflow: hidden;
 }
 
+.word-blue {
+    color: #0e6ffc;
+}
+
 .words span {
     display: block;
     height: 100%;
@@ -171,24 +212,31 @@ main {
     10% {
         transform: translateY(-112%);
     }
+
     25% {
         transform: translateY(-100%);
     }
+
     35% {
         transform: translateY(-212%);
     }
+
     50% {
         transform: translateY(-200%);
     }
+
     60% {
         transform: translateY(-312%);
     }
+
     75% {
         transform: translateY(-300%);
     }
+
     85% {
         transform: translateY(-412%);
     }
+
     100% {
         transform: translateY(-400%);
     }
@@ -274,4 +322,25 @@ iframe {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+@keyframes show {
+    from {
+        opacity: 0;
+        scale: 25%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+.show-on-view {
+    view-timeline-name: --revealing-image;
+    animation-name: show;
+    animation-fill-mode: both;
+    animation-timeline: --revealing-image;
+    animation-range: entry 10% cover 25%;
 }
